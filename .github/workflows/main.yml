@@ -1,0 +1,17 @@
+name: Simple GitHub Actions Workflow
+
+on:
+  push:
+    branches:
+      - main  # Trigger the workflow on push to the main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Use an Ubuntu runner for the job
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3  # Action to check out the code
+
+      - name: Print Hello message
+        run: echo "Hello, GitHub Actions!"  # Run a simple command to print a message
